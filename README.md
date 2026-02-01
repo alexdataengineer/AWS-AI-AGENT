@@ -8,6 +8,12 @@ If you've ever been woken up at 3 AM because a data pipeline failed, you know th
 
 That's why I built this AI-powered operations agent. It does in seconds what used to take me 30-60 minutes of manual investigation. More importantly, it gives consistent, structured answers every time—whether it's you, a junior engineer, or someone from another team responding to the incident.
 
+
+<img width="1116" height="708" alt="image" src="https://github.com/user-attachments/assets/94149e85-f591-43bb-8d5e-6092368f681c" />
+
+<img width="2398" height="1444" alt="image" src="https://github.com/user-attachments/assets/5f7312da-d175-4fe1-a764-5a7241bfba05" />
+
+
 ## The Business Case (ROI That Actually Matters)
 
 Let me be honest about what this solves and what it's worth:

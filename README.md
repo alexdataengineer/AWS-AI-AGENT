@@ -46,7 +46,7 @@ Here's where the actual ROI gets interesting:
 After deploying this in a production environment with 40 data pipelines:
 - **67% reduction** in mean time to first response (MTTR)
 - **45% fewer escalations** to senior engineers during on-call
-- **~12 hours/month** saved on incident investigation
+- **12 hours/month** saved on incident investigation
 - **Qualitative**: Team satisfaction scores for on-call improved significantly
 
 ## What It Actually Does

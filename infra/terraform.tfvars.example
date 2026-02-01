@@ -1,0 +1,23 @@
+aws_region      = "us-east-1"
+project_name    = "ops-agent"
+environment     = "prod"
+
+# Optional: Bedrock model ID
+# bedrock_model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
+
+# Optional: OpenAI API key (for enhanced AI responses)
+# IMPORTANT: Never commit this file with real keys!
+# Use environment variable instead:
+# export TF_VAR_openai_api_key="sk-..."
+# Or set in .env file (which is gitignored)
+# openai_api_key = ""
+
+log_retention_days = 14
+lambda_timeout     = 30
+lambda_memory_size = 512
+
+# CORS origins
+# WARNING: ["*"] allows ANY origin - only use for development!
+# For production, specify exact domains:
+# allowed_origins = ["https://yourdomain.com", "https://app.yourdomain.com"]
+allowed_origins = ["*"]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Debug Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background: #d4edda; }
+        .error { background: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const API_URL = 'https://8n22qcrph9.execute-api.us-east-1.amazonaws.com/chat';
+        
+        async function testAPI() {
+            const results = document.getElementById('results');
+            
+            // Test 1: Simple fetch
+            results.innerHTML += '<div class="test">Test 1: Basic fetch...</div>';
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pipeline_name: 'test',
+                        hours_back: 24
+                    })
+                });
+                
+                const data = await response.json();
+                results.innerHTML += `<div class="test success">✓ Success! Status: ${response.status}<br>Response: ${JSON.stringify(data, null, 2)}</div>`;
+            } catch (error) {
+                results.innerHTML += `<div class="test error">✗ Error: ${error.message}<br>Stack: ${error.stack}</div>`;
+            }
+            
+            // Test 2: Check CORS
+            results.innerHTML += '<div class="test">Test 2: CORS preflight...</div>';
+            try {
+                const corsResponse = await fetch(API_URL, {
+                    method: 'OPTIONS',
+                    headers: {
+                        'Origin': window.location.origin,
+                        'Access-Control-Request-Method': 'POST'
+                    }
+                });
+                results.innerHTML += `<div class="test success">✓ CORS preflight OK! Status: ${corsResponse.status}</div>`;
+            } catch (error) {
+                results.innerHTML += `<div class="test error">✗ CORS Error: ${error.message}</div>`;
+            }
+        }
+        
+        testAPI();
+    </script>
+</body>
+</html>

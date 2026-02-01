@@ -13,8 +13,6 @@ That's why I built this AI-powered operations agent. It does in seconds what use
 
 <img width="2398" height="1444" alt="image" src="https://github.com/user-attachments/assets/5f7312da-d175-4fe1-a764-5a7241bfba05" />
 
-<img width="1218" height="180" alt="image" src="https://github.com/user-attachments/assets/cf45cd6d-7a37-4e5a-90a8-a0e1a792b876" />
-
 <img width="1456" height="762" alt="image" src="https://github.com/user-attachments/assets/54c3a4fa-92f1-471f-9615-9b4849ddbd59" />
 
 
